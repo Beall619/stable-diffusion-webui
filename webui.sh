@@ -204,7 +204,7 @@ then
     cd "${install_dir}"/"${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
     if [[ ! -d "${venv_dir}" ]]
     then
-        "${python_cmd}" -m venv "${venv_dir}"
+        "/usr/local/bin/python3.11" -m venv "${venv_dir}"
         first_launch=1
     fi
     # shellcheck source=/dev/null
